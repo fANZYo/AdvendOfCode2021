@@ -4,14 +4,9 @@ const grid = input.map((row) => row.split('').map(Number));
 
 const getAdjacents = (point) => {
 	return [
-		{ x: point.x - 1, y: point.y - 1 },
-		{ x: point.x - 1, y: point.y },
-		{ x: point.x - 1, y: point.y + 1 },
-		{ x: point.x, y: point.y - 1 },
-		{ x: point.x, y: point.y + 1 },
-		{ x: point.x + 1, y: point.y - 1 },
-		{ x: point.x + 1, y: point.y },
-		{ x: point.x + 1, y: point.y + 1 },
+		{ x: point.x - 1, y: point.y - 1 }, { x: point.x - 1, y: point.y }, { x: point.x - 1, y: point.y + 1 },
+		{ x: point.x, y: point.y - 1 }, { x: point.x, y: point.y + 1 },
+		{ x: point.x + 1, y: point.y - 1 }, { x: point.x + 1, y: point.y }, { x: point.x + 1, y: point.y + 1 },
 	].filter((adjacent) => !(
 		(adjacent.x < 0 || adjacent.x > grid.length - 1)
 		|| (adjacent.y < 0 || adjacent.y > grid[0].length - 1)
